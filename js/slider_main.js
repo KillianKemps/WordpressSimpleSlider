@@ -4,7 +4,7 @@
 /*                                                                */
 /* slider v1.0 for Kemps Hotellerie                               */
 /******************************************************************/
-$(document).ready(function() {
+jQuery(document).ready(function() {
 
 	/**************************/
 	/** Parameters of slider **/
@@ -18,15 +18,15 @@ $(document).ready(function() {
 	/*************************/
 
 	setInterval(function(){
-    	$.fn.slider(currentSlide, numberSlides, widthSlide, speedTransition).next()
+    	jQuery.fn.slider(currentSlide, numberSlides, widthSlide, speedTransition).next()
     }, timeNextSlide);
 
 	/* Slider buttons */
-    $('#slider .next').on('click', function(){
-    	$.fn.slider(currentSlide).next();
+    jQuery('#slider .next').on('click', function(){
+    	jQuery.fn.slider(currentSlide).next();
     });
-    $('#slider .prev').on('click', function(){
- 		$.fn.slider(currentSlide).prev();
+    jQuery('#slider .prev').on('click', function(){
+ 		jQuery.fn.slider(currentSlide).prev();
     });
 
 });
