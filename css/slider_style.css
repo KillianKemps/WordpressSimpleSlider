@@ -44,10 +44,10 @@
 	background-repeat:no-repeat; 
 }
 .control.next{
-	background-image: url('img/arrow_right.png');
+	background-image: url('../img/arrow_right.png');
 }
 .control.prev{
-	background-image: url('img/arrow_left.png');
+	background-image: url('../img/arrow_left.png');
 }
 #currentSlide{
 	position: absolute;

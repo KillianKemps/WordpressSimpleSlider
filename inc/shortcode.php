@@ -16,7 +16,7 @@ class shortcode_gallery {
 			), $atts));
 
 		
-		$slides = get_field('slides', $id_gallery);
+		$slides = get_field('slides', $gallery_id);
 		$return = '';
 			if ( !empty ( $slides ) && is_array($slides) ) :
 
@@ -55,7 +55,7 @@ class shortcode_gallery {
 			false	
 		);
 
-		//Add the script library
+		//Add the script to execute the slider
 		wp_enqueue_script(
 			'slider-main', 
 			SIMPLE_SLIDER_WP_URL . 'js/slider_main.js',
@@ -64,7 +64,7 @@ class shortcode_gallery {
 			false	
 		);
 
-		//Add the script to execute the slider
+		//Add the script library
 		wp_enqueue_script(
 			'plugin', 
 			SIMPLE_SLIDER_WP_URL . 'js/slider_plugin.js',

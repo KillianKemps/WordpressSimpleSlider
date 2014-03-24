@@ -9,7 +9,7 @@ jQuery(document).ready(function() {
 	/**************************/
 	/** Parameters of slider **/
 	
-	var numberSlides = 2;		/* number of images in the slider */
+	var numberSlides = jQuery('#slider-list').attr('data-number-slides');;		/* number of images in the slider */
 	var timeNextSlide = 5000; 	/* time to wait on each slide in milliseconds */
 	var widthSlide = 640; 		/* width of the images in px */
 	var speedTransition = 1300; /* time to do the transition in milliseconds */
