@@ -16,6 +16,7 @@ jQuery(document).ready(function() {
 	
 	/** END Parameters *******/
 	/*************************/
+	var currentSlide = 0;
 
 	setInterval(function(){
     	jQuery.fn.slider(currentSlide, numberSlides, widthSlide, speedTransition).next()
@@ -23,10 +24,10 @@ jQuery(document).ready(function() {
 
 	/* Slider buttons */
     jQuery('#slider .next').on('click', function(){
-    	jQuery.fn.slider(currentSlide).next();
+    	jQuery.fn.slider(currentSlide, numberSlides, widthSlide, speedTransition).next();
     });
     jQuery('#slider .prev').on('click', function(){
- 		jQuery.fn.slider(currentSlide).prev();
+ 		jQuery.fn.slider(currentSlide, numberSlides, widthSlide, speedTransition).prev();
     });
 
 });
