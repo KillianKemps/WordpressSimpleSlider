@@ -36,7 +36,7 @@ function gallery_fields (){
 				'name' => 'control',
 				'type' => 'true_false',
 				'instructions' => 'Check if you want the button controls to appear for the slider',
-				'required' => 1,
+				'required' => 0,
 				'message' => '',
 				'default_value' => 0,
 			),

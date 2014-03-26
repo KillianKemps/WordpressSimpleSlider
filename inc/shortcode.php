@@ -46,15 +46,6 @@ class shortcode_gallery {
 	}
 
 	function enqueue() {
-		//Add jQuery library on which depends the script 
-		wp_enqueue_script(
-			'jquery', 
-			'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js',
-			array(),
-			"1.8.2",
-			false	
-		);
-
 		//Add the script to execute the slider
 		wp_enqueue_script(
 			'slider-main', 

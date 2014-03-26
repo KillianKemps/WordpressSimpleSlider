@@ -6,13 +6,12 @@
 /******************************************************************/
 
 (function(jQuery) {
-	jQuery.fn.slider = function (currentSlide, numberSlides, widthSlide, speedTransition) { 
+	jQuery.fn.slider = function (widthSlide, speedTransition) { 
 		return{
 			slide: function (){
 				//Animation of the slider
-				var currentSlide = parseInt(jQuery('#currentSlide').text());
 				var css = {
-		        	left: - (currentSlide * widthSlide)
+		        	left: - (window.currentSlide * widthSlide)
 		        };
 
 		        jQuery('#slider-list').animate(css, speedTransition);
@@ -21,27 +20,22 @@
 			},
 		    next: function () {
 		        //console.log('Next!');
-		        var currentSlide = parseInt(jQuery('#currentSlide').text());
 		        //console.log('currentSlide=' + currentSlide);
-		        currentSlide++;
+		        window.currentSlide++;
 		        //To have a continuity between the pictures, we go back to the other end if we are at the limit
-		        if(currentSlide > numberSlides-1){
-		        	currentSlide = 0;
+		        if(window.currentSlide > window.numberSlides-1){
+		        	window.currentSlide = 0;
 		        }
-		        var boxCurrentSlide = document.getElementById('currentSlide');
-		        boxCurrentSlide.innerHTML = currentSlide;
 				this.slide();
 		    },
 		    prev: function () {
 		        //console.log('Prev!');
-		        var currentSlide = parseInt(jQuery('#currentSlide').text());
-		        currentSlide--;
+		        //console.log('currentSlide=' + currentSlide);
+		        window.currentSlide--;
 		        //To have a continuity between the pictures, we go back to the other end if we are at the limit
-		        if(currentSlide<0){
-		        	currentSlide = 1;
+		        if(window.currentSlide<0){
+		        	window.currentSlide = 1;
 		        }
-		        var boxCurrentSlide = document.getElementById('currentSlide');
-		        boxCurrentSlide.innerHTML = currentSlide;
 		        this.slide();
 		    }
 		};
