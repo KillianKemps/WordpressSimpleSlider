@@ -71,11 +71,17 @@
 #slider-caption p{
 	width: 100%;
 	padding: 0;
-	margin-top:22px;
+	/* margin-top:22px; */
+	padding-top: 22px;
 	padding-left: 15px;
 	font-size: 24px;
 	font-family: 'engel_light_ltdlight', sans-serif;
 	color:white;
+	display: none;
+}
+#slider-caption p:first-child{
+	display: block;
+	margin: 0;
 }
 #slider-caption span{
 	display: block;
