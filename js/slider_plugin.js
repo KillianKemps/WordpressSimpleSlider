@@ -35,7 +35,6 @@
 		    prev: function () {
 		        //console.log('Prev!');
 		        var currentSlide = parseInt(jQuery('#currentSlide').text());
-		        //console.log('currentSlide=' + currentSlide);
 		        currentSlide--;
 		        //To have a continuity between the pictures, we go back to the other end if we are at the limit
 		        if(currentSlide<0){

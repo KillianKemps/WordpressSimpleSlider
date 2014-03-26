@@ -48,10 +48,10 @@ class shortcode_gallery {
 	function enqueue() {
 		//Add jQuery library on which depends the script 
 		wp_enqueue_script(
-			'jquery-lib', 
-			SIMPLE_SLIDER_WP_URL . 'js/jquery.js',
+			'jquery', 
+			'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js',
 			array(),
-			"1.10.2",
+			"1.8.2",
 			false	
 		);
 
@@ -59,7 +59,7 @@ class shortcode_gallery {
 		wp_enqueue_script(
 			'slider-main', 
 			SIMPLE_SLIDER_WP_URL . 'js/slider_main.js',
-			array('jquery-lib','plugin'),
+			array('jquery','plugin'),
 			"1.0",
 			false	
 		);
@@ -68,7 +68,7 @@ class shortcode_gallery {
 		wp_enqueue_script(
 			'plugin', 
 			SIMPLE_SLIDER_WP_URL . 'js/slider_plugin.js',
-			array('jquery-lib'),
+			array('jquery'),
 			"1.0",
 			false	
 		);
